@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+.tooltip hr
+{
+    border:none;
+    border-top:1px solid #00e5ff;
+    margin:10px 0;
+}
+
+.tooltip
+{
+    min-width:260px;
+    max-width:300px;
+    white-space:normal;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(
+    135deg,
+    #050816,
+    #0a0f2c,
+    #141b4d
+    );
+    color:white;
+    min-height:100vh;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+    color:#00e5ff;
+    margin-bottom:30px;
+}
+
+.tabs{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.tabs button{
+    padding:12px 20px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+
+    background:linear-gradient(
+    90deg,
+    #00e5ff,
+    #9d4edd
+    );
+
+    color:white;
+}
+
+#statsControls{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+#statsControls input,
+#statsControls button{
+    padding:12px;
+    margin:8px;
+    border-radius:10px;
+}
+
+.card{
+    width:80%;
+    margin:20px auto;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid #00e5ff;
+
+    text-align:center;
+}
+
+.progress-bar{
+    width:80%;
+    height:25px;
+
+    margin:20px auto;
+
+    background:#222;
+
+    border-radius:20px;
+}
+
+.progress-fill{
+    height:25px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+    90deg,
+    #00e5ff,
+    #9d4edd
+    );
+}
+
+.sidebar{
+    position:fixed;
+    top:0;
+    left:-250px;
+
+    width:250px;
+    height:100%;
+
+    background:#081126;
+
+    transition:0.4s;
+
+    padding-top:70px;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+}
+
+.menu-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+
+    color:#00e5ff;
+    font-size:30px;
+    cursor:pointer;
+}
+
+#chartContainer{
+    width:80%;
+    margin:20px auto;
+}
+
+.chart-card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid #00e5ff;
+    border-radius:15px;
+    padding:20px;
+    margin-top:20px;
+}
+
+#chartContainer{
+    width:80%;
+    margin:30px auto;
+    background:rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:15px;
+    border:1px solid #00e5ff;
+}
+
+#statsChart{
+    max-height:400px;
+}
+
+#chartContainer{
+    width:80%;
+    margin:30px auto;
+    background:rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:15px;
+    border:1px solid #00e5ff;
+}
+
+#weeklyChart{
+    max-height:400px;
+}
+
+.heatmap-title
+{
+    text-align:center;
+    margin-top:40px;
+    color:#00e5ff;
+}
+
+#heatmapContainer
+{
+    width:320px;
+
+    margin:20px auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(7, 1fr);
+
+    gap:8px;
+}
+
+.heatmap-box
+{
+    width:35px;
+    height:35px;
+
+    border-radius:6px;
+}
+.completed-box
+{
+    background:#22c55e;
+}
+
+.missed-box
+{
+    background:#334155;
+}
+
+.heatmap-legend
+{
+    text-align:center;
+    margin-top:20px;
+}
+
+.legend-box
+{
+    display:inline-block;
+
+    width:15px;
+    height:15px;
+
+    border-radius:4px;
+
+    margin-left:15px;
+}
+
+.completed
+{
+    background:#22c55e;
+}
+
+.missed
+{
+    background:#334155;
+}
+
+.calendar-card{
+    width:80%;
+    margin:30px auto;
+    padding:25px;
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid #00e5ff;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 20px rgba(0,229,255,0.2);
+}
+
+.calendar-title{
+    text-align:center;
+    color:#00e5ff;
+    margin-bottom:20px;
+}
+
+.calendar-header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.weekdays{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    text-align:center;
+    margin-bottom:15px;
+    color:#00e5ff;
+    font-weight:bold;
+}
+
+.calendar-grid{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:10px;
+}
+
+.day{
+    position:relative;
+
+    height:60px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    overflow:visible;
+}
+
+.completed{
+    background:#22c55e;
+}
+
+.missed{
+    background:#ef4444;
+}
+
+.future{
+    background:#334155;
+}
+
+.calendar-day{
+    position:relative;
+    cursor:pointer;
+}
+
+.tooltip{
+    position:absolute;
+    left:50%;
+    bottom:110%;
+    transform:translateX(-50%);
+
+    width:260px;
+
+    background:#081126;
+    color:white;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:1px solid #00e5ff;
+
+    display:none;
+
+    z-index:99999;
+
+    white-space:normal;
+
+    line-height:1.7;
+
+    box-shadow:0 0 20px rgba(0,229,255,.35);
+
+    pointer-events:none;
+}
+
+.day:hover .tooltip
+{
+    display:block;
+}
+
+.partial{
+    background:#f4b400;
+}
+
+.missed{
+    background:#ff4d4d;
+}
+
+.future{
+    background:#3b4252;
+}
+
+.tooltip
+{
+    opacity:0;
+    visibility:hidden;
+
+    transition:0.3s;
+}
+
+.day:hover .tooltip
+{
+    opacity:1;
+    visibility:visible;
+}
+
+.tooltip b
+{
+    color:#00e5ff;
+}
+
+.tooltip
+{
+    line-height:1.7;
+}
+
+.modal
+{
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.7);
+
+    z-index:9999;
+}
+
+.modal-content
+{
+    width:500px;
+
+    max-height:80vh;
+
+    overflow:auto;
+
+    background:#081126;
+
+    color:white;
+
+    margin:60px auto;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    border:2px solid #00e5ff;
+
+    box-shadow:0 0 30px cyan;
+}
+
+.close
+{
+    float:right;
+
+    cursor:pointer;
+
+    font-size:30px;
+
+    color:#00e5ff;
+}
+
+.modal h2
+{
+    color:#00e5ff;
+
+    margin-bottom:20px;
+}
+
+.modal h3
+{
+    margin-top:20px;
+
+    color:#00e5ff;
+}
+
+.modal hr
+{
+    margin:20px 0;
+}
+
+.modal ul
+{
+    padding-left:25px;
+}
+
+.modal li
+{
+    margin:8px 0;
+}
+.tooltip
+{
+    pointer-events:none;
+}

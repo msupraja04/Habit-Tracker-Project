@@ -1,0 +1,186 @@
+/*body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(
+        135deg,
+        #4facfe,
+        #00f2fe
+    );
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    background:white;
+    width:400px;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0px 0px 15px gray;
+}
+
+h1{
+    color:#333;
+}
+
+input{
+    width:90%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:10px 20px;
+    margin:5px;
+    cursor:pointer;
+    border-radius:5px;
+    border:1px solid #4facfe;
+}
+
+button:hover{
+    background:#4facfe;
+    color:white;
+}
+
+#registerForm{
+    display:none;
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    linear-gradient(
+    135deg,
+    #050816,
+    #0a0f2c,
+    #141b4d
+    );
+}
+
+.container{
+    width:450px;
+    padding:35px;
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(0,229,255,0.3);
+
+    box-shadow:
+    0 0 25px rgba(0,229,255,0.3);
+
+    text-align:center;
+}
+
+h1{
+    color:#00e5ff;
+    font-size:38px;
+    margin-bottom:25px;
+    font-weight:700;
+}
+
+.buttons{
+    margin-bottom:25px;
+}
+
+.buttons button{
+    width:120px;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+
+    border-radius:10px;
+
+    border:1px solid #00e5ff;
+
+    background:#050816;
+
+    color:white;
+
+    font-size:15px;
+
+    outline:none;
+}
+
+input::placeholder{
+    color:#a0a0a0;
+}
+
+button{
+    padding:12px 24px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:
+    linear-gradient(
+    90deg,
+    #00e5ff,
+    #9d4edd
+    );
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 15px #00e5ff;
+}
+
+p{
+    margin-top:15px;
+    color:white;
+}
+
+a{
+    color:#00e5ff;
+    text-decoration:none;
+    font-weight:600;
+}
+
+a:hover{
+    color:#9d4edd;
+}
+
+#loginMessage,
+#registerMessage{
+    margin-top:15px;
+    font-weight:bold;
+    color:#00ff88;
+}
+
+#registerForm{
+    display:none;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <p style="color:#bdbdbd;margin-bottom:20px;">
+      Track your habits and build consistency
+    </p>
+    <i class="fas fa-bolt"></i>
+    <h1>Habit Tracker</h1>
+
+    <div class="buttons">
+        <button onclick="showLogin()">Login</button>
+        <button onclick="showRegister()">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginForm">
+
+        <input type="email"
+               id="loginEmail"
+               placeholder="Enter Email">
+
+        <input type="password"
+               id="loginPassword"
+               placeholder="Enter Password">
+
+        <button onclick="loginUser()">
+            Login
+        </button>
+
+        <p>
+            Not Registered?
+            <a href="#" onclick="showRegister()">Register Here</a>
+        </p>
+
+        <p id="loginMessage"></p>
+
+    </div>
+
+    <!-- Register Form -->
+    <div id="registerForm">
+
+        <input type="text"
+               id="name"
+               placeholder="Enter Name">
+
+        <input type="email"
+               id="registerEmail"
+               placeholder="Enter Email">
+
+        <input type="password"
+               id="registerPassword"
+               placeholder="Enter Password">
+
+        <button onclick="registerUser()">
+            Register
+        </button>
+
+        <p>
+            Already have an account?
+            <a href="#" onclick="showLogin()">Login Here</a>
+        </p>
+
+        <p id="registerMessage"></p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

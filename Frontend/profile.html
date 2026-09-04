@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Profile</title>
+
+    <link rel="stylesheet"
+          href="profile.css">
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="menu-btn"
+onclick="toggleMenu()">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+<div id="sidebar"
+class="sidebar">
+
+<h2>⚡ Habit Tracker</h2>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+
+<a href="addhabit.html">➕ Add Habit</a>
+
+<a href="myhabits.html">📋 My Habits</a>
+
+<a href="history.html">📅 History</a>
+
+<a href="statistics.html">📊 Statistics</a>
+
+<a href="badges.html">🏆 Badges</a>
+
+<a href="profile.html">👤 Profile</a>
+<a href="#"
+onclick="logoutUser()">🚪 Logout</a>
+
+</div>
+
+
+<h1>
+
+👤 My Profile
+
+</h1>
+
+
+<div class="profile-card">
+
+<div class="profile-image">
+
+    <img
+    id="profileImage"
+    src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+    alt="Profile Image">
+
+</div>
+
+<h2 id="userName">
+Loading...
+</h2>
+
+<p id="userEmail">
+
+</p>
+
+<p id="memberSince">
+
+Member Since :
+July 2026
+
+</p>
+
+<h3 id="rankName">
+
+🌱 Beginner
+
+</h3>
+
+</div>
+
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<h3>
+
+⭐ Total Points
+
+</h3>
+
+<h2 id="totalPoints">
+
+0
+
+</h2>
+
+</div>
+
+
+<div class="stat-card">
+
+<h3>
+
+🔥 Current Streak
+
+</h3>
+
+<h2 id="currentStreak">
+
+0
+
+</h2>
+
+</div>
+
+
+<div class="stat-card">
+
+<h3>
+
+🏆 Highest Streak
+
+</h3>
+
+<h2 id="highestStreak">
+
+0
+
+</h2>
+
+</div>
+
+
+<div class="stat-card">
+
+<h3>
+
+📋 Total Habits
+
+</h3>
+
+<h2 id="totalHabits">
+
+0
+
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="progress-card">
+
+<h2>
+
+📈 Overall Completion
+
+</h2>
+
+<div class="progress-bar">
+
+<div id="progressFill"
+class="progress-fill">
+
+</div>
+
+</div>
+
+<h3 id="completionRate">
+
+0%
+
+</h3>
+
+</div>
+
+
+<div class="achievement-card">
+
+<h2>
+
+🏅 Achievement Summary
+
+</h2>
+
+<div class="badges-card">
+
+    <h2>
+        🏅 Recent Badges
+    </h2>
+
+    <div id="recentBadges"
+         class="badges-grid">
+
+    </div>
+
+</div>
+
+<div class="favorite-card">
+
+    <h2>
+        🎯 Favorite Habit
+    </h2>
+
+    <h1 id="favoriteHabit">
+        --
+    </h1>
+
+    <p>
+
+        Completed :
+
+        <span id="favoriteCompleted">
+            0
+        </span>
+
+        Times
+
+    </p>
+
+    <p>
+
+        Consistency :
+
+        <span id="favoriteConsistency">
+            0%
+        </span>
+
+    </p>
+
+</div>
+
+<p>
+
+Completed :
+
+<span id="totalCompleted">
+
+0
+
+</span>
+
+</p>
+
+<p>
+
+Average Points :
+
+<span id="averagePoints">
+
+0
+
+</span>
+
+</p>
+
+<p>
+
+Completion Rate :
+
+<span id="completionText">
+
+0%
+
+</span>
+
+</p>
+
+</div>
+
+<!-- ================= SETTINGS ================= -->
+
+<!-- < class="settings-card">
+
+    <h2>⚙ Account Settings</h2>
+
+
+    <div class="setting-item">
+
+    <div>
+
+        <h3>👤 Edit Profile</h3>
+
+        <p>Update your name and email</p>
+
+    </div>
+
+    <button class="setting-btn"
+    onclick="showEditProfile()">
+        Edit
+    </button>
+    </div>
+
+    <div class="setting-item">
+
+    <div>
+
+        <h3>🔒 Change Password</h3>
+
+        <p>Update your password</p>
+
+    </div>
+
+    <button class="setting-btn"
+    onclick="showPasswordModal()">
+        Change
+    </button>
+   </div>
+
+    <!-- <input
+type="file"
+id="photoInput"
+accept="image/*">
+
+<button onclick="uploadPhoto()">
+Upload Photo
+</button> -->
+
+<!-- <div class="setting-item">
+
+    <input
+    type="file"
+    id="photoInput"
+    accept="image/*">
+
+    <button
+    class="setting-btn"
+    onclick="uploadPhoto()">
+
+        📷 Upload
+
+    </button>
+
+</div>
+
+    <div class="setting-item">
+
+    <div>
+
+        <h3>🗑 Remove Profile Photo</h3>
+
+        <p>Restore default profile picture</p>
+
+    </div>
+<button
+    class="delete-btn"
+    onclick="removePhoto()">
+
+        Remove
+
+    </button>
+
+</div>
+
+<!-- 
+    <div class="setting-item"
+    onclick="showPasswordModal()">
+
+        <div>
+
+            <h3>🔒 Change Password</h3>
+
+            <p>Update your password</p>
+
+        </div>
+
+        <span>></span>
+
+    </div> -->
+
+    <!-- <div class="setting-item">
+
+    <div>
+
+        <h3>🚪 Logout</h3>
+
+        <p>Sign out from account</p>
+
+    </div>
+
+    <button
+    class="delete-btn"
+    onclick="logoutUser()">
+
+        Logout
+
+    </button>
+
+</div>
+
+</div>  -->
+
+<div class="settings-card">
+
+    <h2>⚙ Account Settings</h2>
+
+    <!-- Edit -->
+
+    <div class="setting-item">
+
+        <div>
+            <h3>👤 Edit Profile</h3>
+            <p>Update your name and email</p>
+        </div>
+
+        <button
+        class="setting-btn"
+        onclick="showEditProfile()">
+            Edit
+        </button>
+
+    </div>
+
+    <!-- Change Password -->
+
+    <div class="setting-item">
+
+        <div>
+            <h3>🔒 Change Password</h3>
+            <p>Update your password</p>
+        </div>
+
+        <button
+        class="setting-btn"
+        onclick="showPasswordModal()">
+            Change
+        </button>
+
+    </div>
+
+    <!-- Upload -->
+
+    <div class="setting-item">
+
+    <div>
+        <h3>📷 Upload Profile Photo</h3>
+        <p>Select an image from your computer</p>
+    </div>
+
+    <div>
+
+        <input
+        type="file"
+        id="photoInput"
+        accept="image/*">
+
+        <button
+        class="setting-btn"
+        onclick="uploadPhoto()">
+            Upload
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- Remove -->
+
+    <div class="setting-item">
+
+        <div>
+            <h3>🗑 Remove Profile Photo</h3>
+            <p>Restore default profile picture</p>
+        </div>
+
+        <button
+        class="delete-btn"
+        onclick="removePhoto()">
+            Remove
+        </button>
+
+    </div>
+
+    <!-- Logout -->
+
+    <div class="setting-item">
+
+        <div>
+            <h3>🚪 Logout</h3>
+            <p>Sign out from account</p>
+        </div>
+
+        <button
+        class="delete-btn"
+        onclick="logoutUser()">
+            Logout
+        </button>
+
+    </div>
+
+</div>
+
+
+<div id="editProfileModal"
+class="modal">
+
+<div class="modal-content">
+
+<h2>Edit Profile</h2>
+
+<input
+type="text"
+id="editName"
+placeholder="Enter Name">
+
+<input
+type="email"
+id="editEmail"
+placeholder="Enter Email">
+
+<button onclick="saveProfile()">
+Save
+</button>
+
+<button onclick="closeEditProfile()">
+Cancel
+</button>
+
+</div>
+
+</div>
+
+<div id="passwordModal"
+class="modal">
+
+<div class="modal-content">
+
+<h2>Change Password</h2>
+
+<input
+type="password"
+id="oldPassword"
+placeholder="Current Password">
+
+<input
+type="password"
+id="newPassword"
+placeholder="New Password">
+
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirm Password">
+
+<button onclick="changePassword()">
+Update Password
+</button>
+
+<button onclick="closePasswordModal()">
+Cancel
+</button>
+
+</div>
+
+</div>
+
+
+<script src="profile.js"></script>
+
+</body>
+
+</html>

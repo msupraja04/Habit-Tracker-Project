@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Habit</title>
+    <link rel="stylesheet" href="addhabit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="menu-btn" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+<div id="sidebar" class="sidebar">
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="addhabit.html">➕ Add Habit</a>
+    <a href="myhabits.html">📋 My Habits</a>
+    <a href="history.html">📅 History</a>
+    <a href="statistics.html">📊 Statistics</a>
+    <a href="badges.html">🏆 Badges</a>
+    <a href="profile.html">👤 Profile</a>
+    <a href="#" onclick="logoutUser()">🚪 Logout</a>
+</div>
+   <!--<button class="back-btn"
+        onclick="location.href='dashboard.html'">
+    ← Dashboard
+</button> -->
+
+<div class="container">
+
+    <h1>Add New Habit</h1>
+
+    <input type="text"
+           id="name"
+           placeholder="Habit Name">
+
+    <input type="text"
+           id="category"
+           placeholder="Category">
+
+    <select id="frequency">
+
+        <option>DAILY</option>
+
+        <option>WEEKLY</option>
+
+        <option>MONTHLY</option>
+
+    </select>
+
+    <button onclick="addHabit()">
+        Save Habit
+    </button>
+
+    <p id="message"></p>
+
+</div>
+
+<script src="addhabit.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(
+    135deg,
+    #050816,
+    #0a0f2c,
+    #141b4d
+    );
+    color:white;
+    min-height:100vh;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+    color:#00e5ff;
+    margin-bottom:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(0,229,255,0.3);
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin:15px;
+
+    box-shadow:
+    0 0 20px rgba(0,229,255,0.2);
+}
+
+.sidebar{
+    position:fixed;
+    top:0;
+    left:-250px;
+
+    width:250px;
+    height:100%;
+
+    background:#081126;
+
+    transition:0.4s;
+
+    padding-top:70px;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+}
+
+.sidebar a:hover{
+    background:#00e5ff;
+    color:black;
+}
+
+.menu-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+
+    font-size:30px;
+    color:#00e5ff;
+
+    cursor:pointer;
+}
+
+.search-box{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.search-box input{
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #00e5ff;
+
+    background:#050816;
+    color:white;
+}
+
+.search-box button{
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    margin-left:10px;
+
+    background:linear-gradient(
+    90deg,
+    #00e5ff,
+    #9d4edd
+    );
+
+    color:white;
+}
+.tabs{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.tabs button{
+    padding:12px 20px;
+    margin:10px;
+
+    border:none;
+    border-radius:10px;
+
+    background:linear-gradient(
+    90deg,
+    #00e5ff,
+    #9d4edd
+    );
+
+    color:white;
+    cursor:pointer;
+}
+
+#historyControls{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+#historyControls input,
+#historyControls button{
+    padding:12px;
+    margin:8px;
+
+    border-radius:10px;
+}
+
+.summary-card{
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid #00e5ff;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin:15px;
+
+    text-align:center;
+}

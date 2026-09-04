@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Statistics</title>
+    <link rel="stylesheet" href="statistics.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="menu-btn" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+</div>
+
+<div id="sidebar" class="sidebar">
+    <h2>⚡ Habit Tracker</h2>
+
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="addhabit.html">➕ Add Habit</a>
+    <a href="myhabits.html">📋 My Habits</a>
+    <a href="history.html">📅 History</a>
+    <a href="statistics.html">📊 Statistics</a>
+    <a href="badges.html">🏆 Badges</a>
+    <a href="profile.html">👤 Profile</a>
+    <a href="#" onclick="logoutUser()">🚪 Logout</a>
+</div>
+
+<h1>📊 Statistics</h1>
+
+<div class="tabs">
+    <button onclick="showDateStats()">Date Wise</button>
+    <button onclick="showWeeklyStats()">Weekly</button>
+    <button onclick="showMonthlyStats()">Monthly</button>
+    <button onclick="showOverallStats()">Overall</button>
+</div>
+
+<div id="statsControls"></div>
+
+<div id="statsResult"></div>
+
+
+
+
+  
+
+</div>
+    <div
+        id="xpFill"
+        class="xp-fill">
+    </div>
+
+</div>
+<div id="chartContainer">
+    <canvas id="statsChart"></canvas>
+</div>
+<div class="calendar-card">
+
+    <h2 class="calendar-title">
+        📅 Habit Consistency Calendar
+    </h2>
+
+    <div class="calendar-header">
+
+        <button onclick="previousMonth()">
+            ◀
+        </button>
+
+        <h3 id="monthYear">
+            June 2026
+        </h3>
+
+        <button onclick="nextMonth()">
+            ▶
+        </button>
+
+    </div>
+
+    <div class="weekdays">
+
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+        <div>Sun</div>
+
+    </div>
+
+    <div id="calendarGrid"
+         class="calendar-grid">
+    </div>
+
+    <div class="heatmap-legend">
+
+        <span class="legend-box completed">
+        </span>
+        Completed
+
+        <span class="legend-box missed">
+        </span>
+        Missed
+
+        <span class="legend-box future">
+        </span>
+        Future
+
+    </div>
+
+</div>
+
+<div id="habitModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close"
+        onclick="closeModal()">
+        &times;
+        </span>
+
+        <div id="modalBody"></div>
+
+    </div>
+
+</div>
+<script src="statistics.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Poppins;
+}
+
+h1{
+    text-align:center;
+    margin:20px;
+    color:#00e5ff;
+}
+
+.badge-card{
+    width:80%;
+    margin:20px auto;
+    padding:25px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid #00e5ff;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    transition:0.3s;
+}
+
+.badge-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 20px rgba(
+    0,
+    229,
+    255,
+    0.4
+    );
+}
+
+.badge-card h2{
+    color:#00e5ff;
+    margin-bottom:10px;
+}
+
+.badge-card p{
+    margin:10px 0;
+}
+
+.progress-bar{
+    width:80%;
+    height:12px;
+
+    background:#1f2937;
+
+    margin:15px auto;
+
+    border-radius:10px;
+
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+
+    background:linear-gradient(
+    90deg,
+    #00e5ff,
+    #9d4edd
+    );
+
+    border-radius:10px;
+}
+
+.unlocked{
+    color:#4ade80;
+}
+
+.locked{
+    color:#f87171;
+}
+
+.sidebar{
+    position:fixed;
+    top:0;
+    left:-250px;
+
+    width:250px;
+    height:100%;
+
+    background:#081126;
+
+    transition:0.4s;
+
+    padding-top:70px;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px;
+}
+
+.sidebar a:hover
+{
+    background:#00e5ff;
+    color:black;
+    border-radius:8px;
+}
+
+.menu-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+
+    color:#00e5ff;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.badge-card{
+    width:70%;
+    padding:20px;
+}
+
+.completed-bar{
+    background:linear-gradient(
+    90deg,
+    #00e5ff,
+    #9d4edd
+    );
+}
+
+.locked-bar{
+    background:#64748b;
+}
