@@ -252,3 +252,8 @@ setInterval(checkHabitReminder, 60000);
 function toggleMenu() {
   document.getElementById("sidebar").classList.toggle("active");
 }
+
+function logoutUser() {
+  localStorage.clear();
+  window.location.href = "index.html";
+}
